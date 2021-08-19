@@ -18,21 +18,22 @@ public class Compas {
             System.out.println("Введен не верный формат");
             return;
         }
-        if ((degree <= WorldPart.NORTH.degree && degree > (WorldPart.NORTH.degree + 45)) || degree == 0.0) {
+        double b = 360/16;
+        if ((degree >= WorldPart.NORTH.degree-b && degree <= (WorldPart.NORTH.degree)) || (degree >= 0.0 && degree<=b)) {
             System.out.printf("Часть света %s", WorldPart.NORTH.partWorld);
-        } else if (degree >= WorldPart.NW.degree && degree < (WorldPart.NW.degree + 45)) {
+        } else if (degree >= WorldPart.NW.degree-b && degree < (WorldPart.NW.degree + b)) {
             System.out.printf("Часть света %s", WorldPart.NW.partWorld);
-        } else if (degree >= WorldPart.WEST.degree && degree < (WorldPart.WEST.degree + 45)) {
+        } else if (degree >= WorldPart.WEST.degree-b && degree < (WorldPart.WEST.degree + b)) {
             System.out.printf("Часть света %s", WorldPart.WEST.partWorld);
-        } else if (degree >= WorldPart.SW.degree && degree < (WorldPart.SW.degree + 45)) {
+        } else if (degree >= WorldPart.SW.degree-b && degree < (WorldPart.SW.degree + b)) {
             System.out.printf("Часть света %s", WorldPart.SW.partWorld);
-        } else if (degree >= WorldPart.SOUTH.degree && degree < (WorldPart.SOUTH.degree + 45)) {
+        } else if (degree <= WorldPart.SOUTH.degree+b && degree >(WorldPart.SOUTH.degree - b)) {
             System.out.printf("Часть света %s", WorldPart.SOUTH.partWorld);
-        } else if (degree >= WorldPart.SE.degree && degree < (WorldPart.SE.degree + 45)) {
+        } else if (degree <=WorldPart.SE.degree+b && degree > (WorldPart.SE.degree - b)) {
             System.out.printf("Часть света %s", WorldPart.SE.partWorld);
-        } else if (degree >= WorldPart.EAST.degree && degree < (WorldPart.EAST.degree + 45)) {
+        } else if (degree <= WorldPart.EAST.degree+b && degree >(WorldPart.EAST.degree -b)) {
             System.out.printf("Часть света %s", WorldPart.EAST.partWorld);
-        } else if (degree >= WorldPart.NE.degree && degree < (WorldPart.NE.degree + 45)) {
+        } else if (degree <= WorldPart.NE.degree+b && degree >(WorldPart.NE.degree - b)) {
             System.out.printf("Часть света %s", WorldPart.NE.partWorld);
         }
 
