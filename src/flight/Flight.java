@@ -20,7 +20,7 @@ public class Flight {
         Comparator<Luggage> pc = Comparator.comparingInt(p -> p.weight);
         pc.compare(list.get(0), list.get(1));
         list.sort(pc);
-
+        System.out.println(list);
         Comparator<Luggage> strLength = new Comparator<Luggage>() {
         @Override
            public int compare(Luggage o1, Luggage o2) {
