@@ -1,7 +1,5 @@
 package compas_second;
 
-import Pef_lab.WorldPart;
-
 import java.util.Scanner;
 
 public class Destination {
@@ -22,7 +20,7 @@ public class Destination {
             return;
         }
         WorldParts[] worldParts = WorldParts.values();
-        double b = 360 / 16;
+        double b = 360.0 / 16.0;
         if (degree < 0 || degree > 360) {
             System.out.println("Введен не верный формат");
             return;
@@ -31,7 +29,7 @@ public class Destination {
                 System.out.println("Часть света NORTH");
             } else {
                 for (WorldParts dest : worldParts) {
-                    if (degree > dest.degree - b && degree <= dest.degree + b) {
+                       if ((degree > dest.degree - b) && (degree<=dest.degree + b)) {
                         System.out.printf("Часть света %s", dest);
                     }
                 }
