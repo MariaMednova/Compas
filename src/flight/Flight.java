@@ -16,14 +16,8 @@ public class Flight {
         list.add(new Luggage("Aeroflot", "Business", 60));
         list.add(new Luggage("S7", "Business", 50));
 
-        Comparator<Luggage> pc = new LuggageComparator();
-
-        pc = new Comparator<Luggage>() {
-            @Override
-            public int compare(Luggage o1, Luggage o2) {
-                return o1.weight - o2.weight;
-            }
-        };
+       Comparator<Luggage> pc = new LuggageComparator();
+       pc = Comparator.comparingInt(p -> p.weight);
        pc.compare(list.get(0),list.get(1));
 
         list.sort(pc);
