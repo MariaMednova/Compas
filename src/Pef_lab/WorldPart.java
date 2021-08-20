@@ -8,7 +8,7 @@ public enum WorldPart {
     SW ("sw", 225),
     WEST ("west", 270),
    NW ("nw", 315),
-    NORTH ("north", 360);
+    NORTH ("north", 0);
 
     String partWorld;
     int degree;

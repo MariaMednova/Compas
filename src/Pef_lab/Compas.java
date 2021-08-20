@@ -20,7 +20,7 @@ public class Compas {
         }
         double b = 360/16;
         if (degree<0){
-            System.out.println("Введен не верный формат");return;
+            System.out.println("Введен не верный формат"); return;
         } else {
             if ((degree >= WorldPart.NORTH.degree - b && degree <= (WorldPart.NORTH.degree)) || (degree >= 0.0 && degree <= b)) {
                 System.out.printf("Часть света %s", WorldPart.NORTH.partWorld);
